@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lie Detector Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="control-body">
+
+  <main class="control-panel">
+    <h1>AI Lie Detector Control</h1>
+    <p class="control-note">You control every text box and reveal from here.</p>
+
+    <div class="control-grid">
+
+      <section class="control-section">
+        <h2>Main Title</h2>
+        <label><input type="checkbox" id="showMainTitle" checked> Show Main Title</label>
+        <input id="smallTitle" placeholder="Small title" value="LIVE AI SCAN">
+        <input id="mainTitle" placeholder="Main title" value="AI LIE DETECTOR">
+      </section>
+
+      <section class="control-section">
+        <h2>Question Box</h2>
+        <label><input type="checkbox" id="showQuestionBox" checked> Show Question Box</label>
+        <input id="questionLabel" placeholder="Question label" value="QUESTION">
+        <textarea id="questionText" placeholder="Type the question here"></textarea>
+      </section>
+
+      <section class="control-section">
+        <h2>Analyzing</h2>
+        <label><input type="checkbox" id="showAnalyzingBox"> Show Analyzing Animation</label>
+        <input id="analyzingText" value="ANALYZING RESPONSE...">
+      </section>
+
+      <section class="control-section">
+        <h2>Result</h2>
+        <label><input type="checkbox" id="showResultBox"> Show Result</label>
+        <input id="resultSubText" value="FINAL VERDICT">
+        <input id="resultText" value="TRUTH">
+        <select id="resultStyle">
+          <option value="truth">Green / Truth</option>
+          <option value="lie">Red / Lie</option>
+          <option value="neutral">White / Neutral</option>
+        </select>
+
+        <div class="quick-buttons">
+          <button id="truthPreset">Reveal TRUTH</button>
+          <button id="liePreset">Reveal LIE</button>
+          <button id="analyzePreset">Analyze Only</button>
+          <button id="clearResult">Hide Result</button>
+        </div>
+      </section>
+
+      <section class="control-section">
+        <h2>Custom Text Box</h2>
+        <label><input type="checkbox" id="showCustomTextBox"> Show Custom Text Box</label>
+        <textarea id="customText" placeholder="Type any custom message to show on stream"></textarea>
+      </section>
+
+      <section class="control-section">
+        <h2>Warning Box</h2>
+        <label><input type="checkbox" id="showWarningBox"> Show Warning Box</label>
+        <input id="warningText" value="DECEPTION WARNING DETECTED">
+      </section>
+
+      <section class="control-section">
+        <h2>Background</h2>
+        <label><input type="checkbox" id="showBgEffects" checked> Show Background Effects</label>
+      </section>
+
+    </div>
+
+    <button class="update-button" id="updateScreen">UPDATE STREAM SCREEN</button>
+    <button class="reset-button" id="resetScreen">RESET EVERYTHING</button>
+  </main>
+
+  <script type="module" src="control.js"></script>
+</body>
+</html>
