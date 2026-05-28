@@ -8,6 +8,18 @@
 </head>
 <body class="control-body">
 
+<script>
+const password = "HaydoMod2026!";
+
+const entered = prompt("Enter Control Password");
+
+if (entered !== password) {
+  document.body.innerHTML =
+  "<h1 style='color:white;text-align:center;margin-top:100px;font-family:Arial'>Access Denied</h1>";
+  throw new Error("Unauthorized");
+}
+</script>
+
   <main class="control-panel">
     <h1>AI Lie Detector Control</h1>
     <p class="control-note">You control every text box and reveal from here.</p>
