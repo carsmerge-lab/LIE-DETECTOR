@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Lie Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="screen">
+
+    <div id="bgEffects" class="bg-effects">
+      <div class="red-glow"></div>
+      <div class="green-glow"></div>
+      <div class="grid"></div>
+      <div class="scanline"></div>
+    </div>
+
+    <main class="display-shell">
+
+      <section id="mainTitleBox" class="title-box">
+        <div id="smallTitle" class="small-title">
+          LIVE AI SCAN
+        </div>
+
+        <h1 id="mainTitle">
+          AI LIE DETECTOR
+        </h1>
+      </section>
+
+      <section id="questionBox" class="question-box">
+        <div id="questionLabel" class="box-label">
+          QUESTION
+        </div>
+
+        <div id="questionText" class="question-text">
+        </div>
+      </section>
+
+      <section id="analyzingBox" class="analyzing-box hidden">
+
+        <div class="scanner-orb">
+
+          <div class="orb-ring ring-one"></div>
+
+          <div class="orb-ring ring-two"></div>
+
+          <div class="orb-core"></div>
+
+        </div>
+
+        <div id="analyzingText" class="analyzing-text">
+          ANALYZING RESPONSE...
+        </div>
+
+      </section>
+
+      <section id="resultBox" class="result-box hidden">
+
+        <div id="resultSubText" class="result-subtext">
+          FINAL VERDICT
+        </div>
+
+        <div id="resultText" class="result-text">
+          TRUTH
+        </div>
+
+      </section>
+
+      <section id="customTextBox" class="custom-text-box hidden">
+
+        <div id="customText" class="custom-text">
+        </div>
+
+      </section>
+
+      <section id="warningBox" class="warning-box hidden">
+
+        <div id="warningText">
+          DECEPTION WARNING DETECTED
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script type="module" src="display.js"></script>
+
+</body>
+</html>
