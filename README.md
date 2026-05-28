@@ -1,1 +1,1 @@
-# LIE-DETECTOR
+# lie-detector
