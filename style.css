@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background:
+    radial-gradient(circle at left, rgba(0,255,100,0.18), transparent 40%),
+    radial-gradient(circle at right, rgba(255,0,60,0.18), transparent 40%),
+    #040404;
+}
+
+.bg-effects {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.red-glow,
+.green-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+}
+
+.red-glow {
+  right: -150px;
+  top: 10%;
+  background: #ff003c;
+}
+
+.green-glow {
+  left: -150px;
+  top: 10%;
+  background: #00ff88;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.18;
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.04) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+  opacity: 0.15;
+}
+
+.display-shell {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.title-box {
+  text-align: center;
+}
+
+.small-title {
+  color: white;
+  letter-spacing: 6px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+#mainTitle {
+  font-size: 100px;
+  font-weight: 900;
+  color: white;
+  text-shadow:
+    0 0 25px rgba(255,255,255,0.5),
+    0 0 45px rgba(255,0,60,0.25),
+    0 0 45px rgba(0,255,100,0.25);
+}
+
+.question-box {
+  width: 90%;
+  max-width: 1400px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 35px;
+  text-align: center;
+}
+
+.box-label {
+  color: rgba(255,255,255,0.6);
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 58px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+}
+
+.analyzing-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.scanner-orb {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.orb-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.ring-one {
+  inset: 0;
+  border-color: #00ff88;
+  animation: spin 5s linear infinite;
+}
+
+.ring-two {
+  inset: 30px;
+  border-color: #ff003c;
+  animation: spinReverse 3s linear infinite;
+}
+
+.orb-core {
+  position: absolute;
+  inset: 70px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #ffffff, #00ff88 40%, #ff003c 100%);
+  box-shadow:
+    0 0 60px rgba(255,255,255,0.5),
+    0 0 120px rgba(255,0,60,0.4);
+}
+
+.analyzing-text {
+  font-size: 45px;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 3px;
+  animation: pulse 1.2s infinite;
+}
+
+.result-box {
+  text-align: center;
+}
+
+.result-subtext {
+  color: rgba(255,255,255,0.65);
+  font-size: 24px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.result-text {
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow:
+    0 0 40px rgba(255,255,255,0.4);
+}
+
+.custom-text-box {
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(255,255,255,0.12);
+  border-radius: 25px;
+  padding: 25px 40px;
+  max-width: 1300px;
+}
+
+.custom-text {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+}
+
+.warning-box {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(255,0,60,0.12);
+  border: 2px solid #ff003c;
+  padding: 18px 30px;
+  border-radius: 20px;
+  color: #ff003c;
+  font-size: 28px;
+  font-weight: 900;
+  animation: pulse 0.6s infinite;
+}
+
+.truth {
+  color: #00ff88;
+  text-shadow:
+    0 0 25px rgba(0,255,100,0.8),
+    0 0 70px rgba(0,255,100,0.6);
+}
+
+.lie {
+  color: #ff003c;
+  text-shadow:
+    0 0 25px rgba(255,0,60,0.8),
+    0 0 70px rgba(255,0,60,0.6);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
